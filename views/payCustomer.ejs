@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SWIFT Payout using Rapyd Disburse</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <link rel="stylesheet" href="public/app.css">
+</head>
+<body>
+  <div class="row">
+    <div class="col-md-3">
+    </div>
+    <div class="col-md-6 bg-light">
+      <form id="checkoutForm">
+        <h1> Rapyd Disburse SWIFT Payment</h1>
+        
+        <!-- Initial form fields to get the required fields for the SWIFT payment method by country -->
+        <fieldset>
+          
+          <p>
+            <label for="payout_currency" class="form-label">Customer's Currency</label>
+            <input type="text" required id="payout_currency" name="payout_currency" class="form-control" placeholder="Payout Currency" required>
+          </p>
+          
+          <p>
+            <label for="user_country">Country</label>
+            <input type="text" required id="user_country" name="user_country" class="form-control" placeholder="Country Code, ex: FR" required>
+          </p>
+
+          <p>
+            <label for="transaction_amount">Amount</label>
+            <input type="text" required id="transaction_amount" name="transaction_amount" class="form-control" placeholder="Amount" required>
+          </p>
+          
+        </fieldset>
+
+        <!-- The Button to execute the "getRequiredFields" request -->
+        <p>
+          <button type="button" id="pay-button" class="btn btn-primary form-control">Pay Customer</button>
+        </p>
+
+        <fieldset id="payment-required-fields">
+          <!-- Payment fields will show up here -->
+        </fieldset>
+
+        <!-- Send Payment Button -->
+        <p>
+          <button type="submit" id="send-payment-button" class="btn form-control btn-success">Send Payment</button>
+        </p>
+
+        <!-- Loading Notification -->
+        <div class="alert alert-success request-status-bar" id="request-status-success" role="alert">
+          Payment Sent
+        </div>
+        <!-- Success Notification -->
+        <div class="alert alert-warning request-status-bar" id="request-status-loading" role="alert">
+          Processing...
+        </div>
+        <!-- Error Notification -->
+        <div class="alert alert-danger request-status-bar" id="request-status-error" role="alert">
+
+        </div>
+
+      </form>
+    </div>
+    <div class="col-md-3">
+    </div>
+  </div>
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="public/app.js"></script>
+</html>

@@ -1,0 +1,12 @@
+label {
+	text-transform: capitalize;
+}
+
+#send-payment-button{
+	display: none;
+}
+
+.request-status-bar {
+	text-align: center;
+	display: none;
+}
