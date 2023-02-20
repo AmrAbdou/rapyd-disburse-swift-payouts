@@ -9,7 +9,7 @@ class payoutController{
 
     }
 
-    // Get SWIFT payment method required fields using Rapyd API
+    // Get Swift payment method required fields using Rapyd Disburse API
     static async getRequiredFields(request, response, next){
         try {
             const { 
@@ -33,7 +33,7 @@ class payoutController{
           }
     }
 
-    // Create SWIFT payment using Rapyd API
+    // Create Swift payment using Rapyd Disburse API
     static async sendPayment(request, response){
         const walletID = process.env.PAYOUT_WALLET_ID; // Wallet ID
 

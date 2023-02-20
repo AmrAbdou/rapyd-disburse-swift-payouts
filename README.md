@@ -1,5 +1,5 @@
 # Swift Payout with Rapyd Disburse API 
-A simple Node.js application to send SWIFT payout to international customers using Rapyd Disburse API which allows businesses to issue international payments using the SWIFT method.
+A simple Node.js application to send Swift payout to international customers using Rapyd Disburse API which allows businesses to issue international payments using the Swift method.
 
 ## What do you need to start
 - Rapyd Account (https://dashboard.rapyd.net/sign-up).
